@@ -1,7 +1,7 @@
 using CircularDominoChain.Models;
 using CircularDominoChain.Services;
 
-namespace CircularDominoChainTests
+namespace CircularDominoChainTests.Services
 {
     public class CircularDominoChainTests
     {
@@ -52,7 +52,7 @@ namespace CircularDominoChainTests
         {
             // Arrange
             DominoChainService dominoChainService = new();
-            Domino[] dominos = [new Domino(1, 2), new Domino(2,1)];
+            Domino[] dominos = [new Domino(1, 2), new Domino(2, 1)];
 
             // Act
             var result = dominoChainService.GetCircularDominoChain(dominos);
@@ -81,7 +81,7 @@ namespace CircularDominoChainTests
         {
             // Arrange
             DominoChainService dominoChainService = new();
-            Domino[] dominos = [new (2,1), new(2,3), new(1,3)];
+            Domino[] dominos = [new(2, 1), new(2, 3), new(1, 3)];
 
             // Act
             var result = dominoChainService.GetCircularDominoChain(dominos);
