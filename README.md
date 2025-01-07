@@ -15,8 +15,8 @@ For stones [1|2], [4|1] and [2|3] the resulting chain is not valid: [4|1] [1|2] 
 
 # Considerations For Development
 
-Domino chain cannot be empty, result is not a circle
-Domino chain with one item, must have the same value on either side to be a circle
-Domino can be flipped to fit an adjacent stone's value
-Domino chain is circular if the first domino left number is the same as the last domino in the chain's right number
+- Domino chain cannot be empty, result is not a circle
+- Domino chain with one item, must have the same value on either side to be a circle
+- Domino can be flipped to fit an adjacent stone's value
+- Domino chain is circular if the first domino left number is the same as the last domino in the chain's right number
 
