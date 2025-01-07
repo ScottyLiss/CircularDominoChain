@@ -14,7 +14,7 @@ namespace CircularDominoChain.Services
 
             if (dominos.Length == 1)
             {
-                return $"[{dominos[0].leftValue}|{dominos[0].rightValue}]";
+                return dominos[0].leftValue == dominos[0].rightValue ? $"[{dominos[0].leftValue}|{dominos[0].rightValue}]" : "Not Circular";
             }
 
             Dictionary<Domino, bool> usedDominos = dominos.ToDictionary(d => d, d => false); 
@@ -28,7 +28,6 @@ namespace CircularDominoChain.Services
 
             return "Not Circular";
         }
-
 
         private List<Domino> Backtrack(List<Domino> dominos, List<Domino> permutation, Dictionary<Domino, bool> used)
         {

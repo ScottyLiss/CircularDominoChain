@@ -34,6 +34,20 @@ namespace CircularDominoChainTests
         }
 
         [Fact]
+        public void GivenASingleDominoWithNotTheSameValueDotsReturnFalse()
+        {
+            // Arrange
+            DominoChainService dominoChainService = new();
+            Domino[] dominos = [new Domino(1, 2)];
+
+            // Act
+            var result = dominoChainService.GetCircularDominoChain(dominos);
+
+            // Assert
+            Assert.Equal("Not Circular", result);
+        }
+
+        [Fact]
         public void GivenTwoOrderedDominosWithSameValuesReturnTrue()
         {
             // Arrange
